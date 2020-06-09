@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Details.DetailsPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/Image_Back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/back"
+                        android:tint="#292929" />
+                </FrameLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="10dp">
+
+
+                <com.flaviofaria.kenburnsview.KenBurnsView
+                    android:id="@+id/BusinessBannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_placeholder_withoutlogo_small"/>
+
+                <FrameLayout
+                    android:id="@+id/NoPhotoFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#65000000">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Images Found"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10dp"
+                        android:layout_gravity="center"/>
+
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/B_Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mandalay Bay"
+                        android:textColor="#353535"
+                        android:textSize="14dp"
+
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:freezesText="true"/>
+
+                    <TextView
+                        android:id="@+id/B_Location_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Khannagar, Cuttack"
+                        android:textColor="#BBBBBB"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+
+
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/NotLiked"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rounded_button_lessround"
+                    android:backgroundTint="#F3F3F3">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/fav"
+                        android:padding="11dp"
+                        android:tint="#BBBBBB"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:layout_gravity="center|bottom"
+                        android:textColor="#9E9E9E"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="8dp"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/Liked"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rounded_button_lessround"
+                    android:backgroundTint="#F3F3F3">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/fav"
+                        android:padding="11dp"
+                        android:tint="#F73150"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saved"
+                        android:layout_gravity="center|bottom"
+                        android:textColor="#F73150"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="8dp"/>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EBEBEB" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/S_Call"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#F1F1F1"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/call"
+                        android:tint="#4D83EE"
+                        android:padding="13dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="27dp"
+                        android:textSize="10dp"
+                        android:textColor="#97999E"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/S_Direction"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#F1F1F1"
+                        android:padding="13dp"
+                        android:src="@drawable/map"
+                        android:tint="#4D83EE" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direction"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="27dp"
+                        android:textSize="10dp"
+                        android:textColor="#97999E"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/S_Message"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#F1F1F1"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/message"
+                        android:tint="#4D83EE"
+                        android:padding="13dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Message"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="27dp"
+                        android:textSize="10dp"
+                        android:textColor="#97999E"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/S_Share"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#F1F1F1"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/share"
+                        android:tint="#4D83EE"
+                        android:padding="13dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="27dp"
+                        android:textSize="10dp"
+                        android:textColor="#97999E"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#EBEBEB" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#ADADAD"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/B_Desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="25dp"
+                    android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+                    android:textColor="#505661"
+                    android:textSize="11dp" />
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:background="#EBEBEB" />
+
+            <TextView
+                android:id="@+id/Text_Photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photos"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#ADADAD"
+                android:textSize="10dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recyclerview_Photos"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/PhotosSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="12dp"
+                android:background="#EBEBEB" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/watch"
+                        android:padding="4dp"
+                        android:tint="#474747"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:id="@+id/B_Timings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Timingss"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#12B372"
+                        android:textSize="11dp" />
+
+                    <LinearLayout
+                        android:id="@+id/Timing_Panel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="50dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:textSize="11dp"
+                                android:text="Sun"/>
+
+                            <TextView
+                                android:id="@+id/B_Sun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="11dp"
+                                android:text=":     Closed"
+                                android:textColor="#F36363" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Mon"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Mon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="11dp"
+                                android:text=":     10:00 AM - 11:30 PM"
+                                android:textColor="#858585" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Tue"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Tue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="11dp"
+                                android:text=":     10:00 AM - 11:30 PM"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Wed"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Wed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:textSize="11dp"
+                                android:layout_marginLeft="5dp"
+                                android:text=":     10:00 AM - 11:30 PM"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Thu"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Thu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:textSize="11dp"
+                                android:layout_marginLeft="5dp"
+                                android:text=":     10:00 AM - 11:30 PM"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Fri"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Fri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:textSize="11dp"
+                                android:layout_marginLeft="5dp"
+                                android:text=":     10:00 AM - 11:30 PM"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:text="Sat"
+                                android:textSize="11dp"/>
+
+                            <TextView
+                                android:id="@+id/B_Sat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#838383"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="11dp"
+                                android:text=":     10:00 AM - 11:30 PM"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="13dp"
+                    android:background="#EBEBEB" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/call"
+                        android:padding="4dp"
+                        android:tint="#474747"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:id="@+id/B_ContactPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Person"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#505661"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/B_ContactDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0674 - 2413713 , 07008146921"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#505661"
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/map"
+                        android:padding="3dp"
+                        android:tint="#474747"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:id="@+id/B_Location_Full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mission Road , Buxibazar , Cuttack - 753001 ( Near Stewart Science College )"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#505661"
+                        android:textSize="11dp" />
+
+                </FrameLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/MapClickPanel"
+                        android:background="#1B050505"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/MapMarker"
+                        android:layout_width="77dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="map_marker_expand_two.json"
+                        app:lottie_loop="true" />
+
+                    <FrameLayout
+                        android:id="@+id/EmptryFRameMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#9E000000">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="No Coordinates Available"
+                            android:textColor="#8DFFFFFF"
+                            android:textSize="9dp" />
+
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#EBEBEB" />
+
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/add_two"
+                        android:padding="3dp"
+                        android:tint="#474747"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Listed In"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="#474747"
+                        android:textSize="10dp" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/B_AlsoListedIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="#505661"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="20dp"
+                android:background="#F5F5F5"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#F5F5F5">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/logo_only"
+                    android:tint="#c7c7c7"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="20dp"
+                    android:text="EventAll. All Rights Reserved"
+                    android:textColor="#C7C7C7"/>
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F5F5F5"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</FrameLayout>

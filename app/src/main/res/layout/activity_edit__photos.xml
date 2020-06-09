@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ViewBusiness.EditPages.Edit_Photos">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="0dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gradient"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/photos"
+            android:tint="#fff"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/backAss"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/back"
+            android:tint="#fff"
+            android:padding="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSINESS PHOTOS"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="13dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"/>
+
+    <FrameLayout
+        android:id="@+id/EmptyPhotoFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Photos added yet."
+            android:layout_gravity="center"
+            android:textColor="#C6C6C6"
+            android:textSize="12dp"/>
+
+    </FrameLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Card_AddPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="20dp"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="#355AB8"
+        app:cardCornerRadius="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Photo"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="12dp"/>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

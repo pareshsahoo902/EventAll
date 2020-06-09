@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chip
+    style="@style/Widget.MaterialComponents.Chip.Entry"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:checkable="false"
+    app:chipBackgroundColor="#5189FA"
+    app:closeIconTint="#95B5F8"
+    app:iconStartPadding="5dp"/>

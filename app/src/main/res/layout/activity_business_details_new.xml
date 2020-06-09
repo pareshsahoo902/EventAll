@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ViewBusiness.Business_Details">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:alpha="0.95"
+            android:src="@drawable/gradient" />
+
+
+        <ImageView
+            android:id="@+id/BackImageSalSal"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/back"
+            android:tint="#fff"
+            android:padding="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Business Details"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Business Title"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Title"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/TV_BusinessTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Business Title"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Desc"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/TV_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Describe your buisness"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Photos"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Photos"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/Text_GiveSomePhotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Give some photos"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Business Category"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Category"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/Text_SelectCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Category selected yet."
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Details"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_ContactDetails"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/TV_ContactDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12dp"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="#4D596C"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Business Timings"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Timings"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/TV_Timing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Provide your Business Timing"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address and Map Direction"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="10dp"
+                        android:textColor="#2FC19E"/>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Edit_Address"
+                        android:layout_width="45dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#2FC19E">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Edit"
+                            android:textSize="10dp"
+                            android:textColor="#fff"/>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/TV_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Provide Business Address"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="12dp"
+                    android:textColor="#4D596C"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/MapCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp">
+
+
+
+                    <fragment
+                        android:id="@+id/map"
+                        class="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/MapClickPanel"
+                        android:background="#3E050505"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/marker_pin"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="#CCCCCC"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/WhitePanel"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
+
+
+
+
+</FrameLayout>

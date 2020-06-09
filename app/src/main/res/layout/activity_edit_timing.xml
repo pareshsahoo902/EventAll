@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ViewBusiness.EditPages.Edit_Timing">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gradient" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/watch"
+                android:tint="#fff"
+                android:padding="3dp"
+                android:layout_marginBottom="15dp"/>
+
+            <ImageView
+                android:id="@+id/backbala"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/back"
+                android:tint="#fff"
+                android:padding="3dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BUSINESS TIMING"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="13dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#F5F5F5">
+
+                    <CheckBox
+                        android:id="@+id/Opens247"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="20dp"
+                        android:text="Open 24x7" />
+
+                    <CheckBox
+                        android:id="@+id/applytoall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply to all"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="30dp"/>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="SUN"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/SunSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/SunSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="MON"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/MonSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/MonSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="TUE"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/TueSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/TueSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="WED"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/WedSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/WedSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="THU"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/ThuSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/ThuSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="FRI"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/FriSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/FriSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="11dp"
+                        android:layout_gravity="center|left"
+                        android:text="SAT"
+                        android:background="@drawable/rounded_button_lessround"
+                        android:backgroundTint="#F0F0F0"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginLeft="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="10dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/SatSpinnerOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/SatSpinnerTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:hint="Select"
+                                android:entries="@array/timings"
+                                android:textSize="12dp"
+                                android:backgroundTint="#ADADAD"
+                                android:textColorHint="#D5D5D5"/>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:cardBackgroundColor="#298DDD"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="2dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:alpha="0.7"
+                    android:background="@drawable/gradient" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Save"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

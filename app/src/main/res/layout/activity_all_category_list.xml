@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    tools:context=".Activities.SubCategory.AllCategoryList">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="10dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient" />
+
+
+        <TextView
+            android:id="@+id/Text_HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="All Categories"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+
+        <ImageView
+            android:id="@+id/BackImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:src="@drawable/back"
+            android:tint="#FFFFFF" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/Text_SubCatCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="15dp"
+        android:text="Total 7 Sub Categories"
+        android:textColor="#323232"
+        android:textSize="11dp" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSubCat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="105dp"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdge="vertical"
+        android:background="#fff"
+        android:fadingEdgeLength="20dp"/>
+
+
+
+</FrameLayout>

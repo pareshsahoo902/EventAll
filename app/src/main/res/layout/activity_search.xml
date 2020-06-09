@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.Search.Search">
+
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="#487BE3"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"/>
+
+        <TextView
+            android:id="@+id/Text_Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#4AFFFFFF"
+            android:textSize="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/close"
+            android:tint="#98C6F4"
+            android:layout_gravity="right"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="55dp">
+
+
+            <FrameLayout
+                android:id="@+id/Frame_Location"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center|left"
+                    android:src="@drawable/current_location"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/text_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:text="Select Location"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="20dp"
+
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:freezesText="true"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/Frame_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_button_lessround"
+                android:backgroundTint="#F3F4F6"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/text_categorytosearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="20dp"
+                    android:text="Select Category"
+                    android:textColor="#6F7878"
+                    android:textSize="12dp" />
+
+                <FrameLayout
+                    android:id="@+id/Card_Search"
+                    android:layout_width="50dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/rounded_button_lessround"
+                    android:backgroundTint="#4E63CF">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/search"
+                        android:tint="#FFFFFF" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="15dp"
+        android:requiresFadingEdge="vertical"/>
+
+
+    <FrameLayout
+        android:id="@+id/EmptryFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_search_three.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Nothing found in this category"
+            android:textColor="#C1C1C1"
+            android:textSize="11dp"
+
+            android:layout_marginTop="70dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/Text_SearchAnything"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Search anything you need to find"
+        android:textColor="#AFAFAF"
+        android:textSize="11dp"
+        android:layout_marginTop="70dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"/>
+
+
+</FrameLayout>
